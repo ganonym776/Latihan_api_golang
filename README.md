@@ -1,9 +1,9 @@
 # ENV
-DB_USER = root
-DB_PASSWORD = password db mysql
-DB_PORT = 3306
-DB_NAME = nama DB mysql
-PORT = 8000
+1. DB_USER = root
+2. DB_PASSWORD = password db mysql
+3. DB_PORT = 3306
+4. DB_NAME = nama DB mysql
+5. PORT = 8000
 
 # Build Go
 1. Download dependency
