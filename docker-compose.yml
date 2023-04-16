@@ -1,0 +1,25 @@
+services:
+  todolist-v2-be:
+    image: ganonym776/be
+    container_name: mybe
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+      - DB_HOST=db-mysql
+      - DB_USER=usertodolist
+      - DB_PASSWORD=sercet
+      - DB_PORT=3306
+      - DB_NAME=todolistv2
+    ports: 
+      - 8083:3000
+    depends_on:
+      - db-mysql
+  db-mysql:
+      image: mysql:5.7
+      container_name: todolist-v2-db-mysql
+      restart: unless-stopped
+      environment:
+        - MYSQL_ROOT_PASSWORD=sercet
+        - MYSQL_USER=usertodolist
+        - MYSQL_PASSWORD=sercet
+        - MYSQL_DATABASE=todolistv2
